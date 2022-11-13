@@ -1,0 +1,30 @@
+.app-header {
+  height: 60px;
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid rgb(242, 242, 242);
+
+  .container-fluid {
+    max-width: 1280px;
+  }
+
+  .primary {
+    color: #0F3154;
+  }
+
+  .nav-item {
+    border: 1px solid #EDEFF5;
+    border-radius: 5px;
+
+    .nav-link {
+      letter-spacing: 0.16px;
+      color: #0F3154;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .nav-name {
+      display: none;
+    }
+  }
+}
