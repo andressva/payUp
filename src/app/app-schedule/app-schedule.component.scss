@@ -1,0 +1,39 @@
+.app-schedule {
+  height: 60px;
+  width: 100%;
+
+  .primary {
+    color: #0F3154;
+  }
+
+  .nav-item {
+    border: 1px solid #EDEFF5;
+    border-radius: 5px;
+
+    .nav-link {
+      letter-spacing: 0.16px;
+      color: #0F3154;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .nav-name {
+      display: none;
+    }
+  }
+
+  &--content {
+    .calendar-wrap {
+      width: 55%;
+    }
+
+    .payments-wrap {
+      width: 40%;
+      background-color: rgb(183, 151, 24);
+    }
+  }
+}
+
+.cal-month-view .cal-header .cal-cell {
+  text-transform: uppercase;
+}

@@ -1,2 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
-@import "~bootstrap/dist/css/bootstrap.css"
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+// ####### CALENDAR GLOBAL STYLES #######
+
+.cal-weekend .cal-day-number,
+.cal-day-number {
+  color: black !important;
+  opacity: 1 !important;
+  font-size: 19px !important;
+}
+
+.cal-out-month .cal-day-number {
+  color: #9297A3 !important;
+}
+
+.cal-month-view .cal-cell {
+  align-items: flex-start;
+  padding-left: .6rem;
+} 
+
+.cal-month-view .cal-header .cal-cell {
+  text-transform: uppercase;
+}
+
+.cal-month-view .cal-day-cell.cal-today {
+  background-color: rgba(75, 144, 241, .2) !important;
+}

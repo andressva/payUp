@@ -1,0 +1,79 @@
+<nav class="app-schedule navbar navbar-expand">
+  <div class="container-fluid px-0">
+    <div class="navbar-nav">
+      <li class="px-2 me-4">
+        <a routerLink="add" class="nav-link primary">
+          <fa-icon [icon]="faArrowLeft"></fa-icon>
+        </a>
+      </li>
+      <li class="px-2">
+        <a routerLink="add" class="nav-link primary fw-bold">
+          <fa-icon class="me-2" [icon]="faCalendar"></fa-icon>
+          Calendario
+        </a>
+      </li>
+    </div>
+    <div class="navbar-nav">
+      <li class="nav-item me-2 px-2">
+        <a routerLink="/" class="nav-link">Mes</a>
+      </li>
+      <li class="nav-item px-2">
+        <a routerLink="/" class="nav-link">Año</a>
+      </li>
+    </div>
+  </div>
+</nav>
+
+<div class="app-schedule--content d-flex justify-content-between">
+  <div [ngSwitch]="view" class="calendar-wrap">
+    <nav class="app-schedule navbar navbar-expand">
+      <div class="container-fluid px-0">
+        <div class="navbar-nav">
+          <li class="nav-item me-2 px-2">
+            <a routerLink="/" class="nav-link text-capitalize">{{ viewDate | calendarDate:(view + 'ViewTitle'):'es' }}</a>
+          </li>
+        </div>
+        <div class="navbar-nav">
+          <li class="nav-item px-2 me-2">
+            <a 
+              routerLink="add" 
+              class="nav-link"
+              mwlCalendarPreviousView
+              [view]="view"
+              [(viewDate)]="viewDate"
+            >
+              <fa-icon [icon]="faCaretLeft"></fa-icon>
+            </a>
+          </li>
+          <li class="nav-item px-2 me-2">
+            <a 
+              routerLink="add" 
+              class="nav-link"
+              mwlCalendarNextView
+              [view]="view"
+              [(viewDate)]="viewDate"
+            >
+              <fa-icon [icon]="faCaretRight"></fa-icon>
+            </a>
+          </li>
+          <li class="nav-item px-2">
+            <a 
+              routerLink="/" 
+              class="nav-link" 
+              [(viewDate)]="viewDate" 
+              mwlCalendarToday>
+                Hoy
+            </a>
+          </li>
+        </div>
+      </div>
+    </nav>
+    <mwl-calendar-month-view
+      *ngSwitchCase="CalendarView.Month"
+      [viewDate]="viewDate"
+      [locale]="locale"
+    >
+    </mwl-calendar-month-view>
+  </div>
+  <div class="payments-wrap"></div>
+</div>
