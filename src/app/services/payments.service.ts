@@ -14,13 +14,13 @@ export class PaymentsService {
         id:  72393,
         provider: "FinsoFacil",
         type: "FACTURAS",
-        amount: 1000000,
+        amount: "1.000.000",
       },
       {
         id:  72394,
         provider: "FinsoFacil",
         type: "FACTURAS",
-        amount: 1000000,
+        amount: "1.000.000",
       }
     ]
   }

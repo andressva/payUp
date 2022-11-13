@@ -1,5 +1,15 @@
 import { Component } from '@angular/core';
-import { faCalendarDays, faArrowLeft, faCaretRight, faCaretLeft } from '@fortawesome/free-solid-svg-icons';
+import { 
+  faCalendarDays, 
+  faArrowLeft, 
+  faCaretRight, 
+  faCaretLeft,
+  faTags,
+  faCircleCheck,
+  faFile,
+  faCircleUp,
+  faCircleArrowRight,
+} from '@fortawesome/free-solid-svg-icons';
 
 import { Payment } from '../model/payment';
 
@@ -27,6 +37,11 @@ export class AppSchedule {
   faArrowLeft = faArrowLeft;
   faCaretRight = faCaretRight;
   faCaretLeft = faCaretLeft;
+  faTags = faTags;
+  faCircleCheck = faCircleCheck;
+  faFile = faFile;
+  faCircleUp = faCircleUp;
+  faCircleArrowRight = faCircleArrowRight;
 
   CalendarView = CalendarView;
   view: CalendarView = CalendarView.Month;
@@ -34,11 +49,13 @@ export class AppSchedule {
   locale: string = 'es';
 
   protected payments: Payment[] = [];
+  protected total: string = "2.000.000";
 
 
   constructor(private paymentService: PaymentsService) { }
 
   ngOnInit() {
     this.payments = this.paymentService.getPayments();
+    // this.total = this.payments.map(p => Number(p.amount.replaceAll(".", ""))).reduce((a, b) => a + b)
   }
 }

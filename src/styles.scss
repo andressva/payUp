@@ -2,6 +2,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 @import "~bootstrap/dist/css/bootstrap.css";
 
+.primary {
+  color: #0F3154;
+}
+
+.bg-primary {
+  background-color: #0F3154;
+}
+
+.secondary {
+  color: #4B90F1;
+}
+
+.bg-secondary {
+  background-color: #4B90F1;
+}
+
+.danger {
+  color: #FF6B6B;
+}
+
+.bg-danger {
+  background-color: #FF6B6B;
+}
+
 
 // ####### CALENDAR GLOBAL STYLES #######
 
